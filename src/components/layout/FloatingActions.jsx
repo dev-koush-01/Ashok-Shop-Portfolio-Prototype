@@ -4,7 +4,7 @@ export default function FloatingActions() {
   return (
     <div className="fixed bottom-6 right-6 flex flex-col space-y-4 z-[100]">
       <a 
-        href="https://wa.me/919876543210" 
+        href="https://wa.me/916296324199"
         target="_blank" 
         rel="noopener noreferrer"
         className="bg-green-500 text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform flex items-center justify-center group"
@@ -14,7 +14,7 @@ export default function FloatingActions() {
       </a>
       
       <a 
-        href="https://instagram.com/ashokfamilyshop" 
+        href="https://www.instagram.com/ashokthefamilyshop?igsh=bWR3ZnBxbzRnY3lw" 
         target="_blank" 
         rel="noopener noreferrer"
         className="bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-600 text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform flex items-center justify-center group"
@@ -24,7 +24,7 @@ export default function FloatingActions() {
       </a>
 
       <a 
-        href="tel:03412550123" 
+        href="tel:0341 7963307"
         className="bg-amber-600 text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform flex items-center justify-center group"
       >
         <Phone size={24} />
