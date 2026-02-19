@@ -18,7 +18,7 @@ return(
       </div>
       
       <div>
-        <h4 className="text-lg font-semibold mb-6 text-amber-500 uppercase tracking-widest text-sm">Quick Links</h4>
+        <h4 className="text-lg font-semibold mb-6 text-amber-500 uppercase tracking-widest">Quick Links</h4>
         <ul className="space-y-3">
           {['home', 'about', 'journey', 'gallery', 'contact'].map(page => (
             <li key={page}>
@@ -42,7 +42,7 @@ return(
       </div>
 
       <div>
-        <h4 className="text-lg font-semibold mb-6 text-amber-500 uppercase tracking-widest text-sm">Collections</h4>
+        <h4 className="text-lg font-semibold mb-6 text-amber-500 uppercase tracking-widest">Collections</h4>
         <ul className="space-y-3 text-gray-400 text-sm">
           <li>Mens Wear</li>
           <li>Womens Ethnic</li>
@@ -52,7 +52,7 @@ return(
       </div>
 
       <div>
-        <h4 className="text-lg font-semibold mb-6 text-amber-500 uppercase tracking-widest text-sm">Store Hours</h4>
+        <h4 className="text-lg font-semibold mb-6 text-amber-500 uppercase tracking-widest">Store Hours</h4>
         <ul className="space-y-3 text-gray-400 text-sm">
           <li className="flex justify-between"><span>Mon - Sat</span> <span>10:00 - 21:00</span></li>
           <li className="flex justify-between"><span>Sunday</span> <span>11:00 - 20:00</span></li>
