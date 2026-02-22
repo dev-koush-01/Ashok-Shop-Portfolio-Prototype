@@ -9,7 +9,7 @@ import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import FloatingActions from './components/layout/FloatingActions';
 import AnimatedCounter from './components/common/AnimatedCounter';
-import CollectionModal from './components/common/CollectionModel';
+import CollectionModal from './components/common/CollectionModal';
 
 /**
  * --- IMAGE & ASSET UPLOAD GUIDE ---
