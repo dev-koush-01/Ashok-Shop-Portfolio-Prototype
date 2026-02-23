@@ -68,12 +68,12 @@ const HomePage = ({ setCurrentPage }) => {
   ];
 
   const reels = [
-    { url: "https://www.instagram.com/reel/DVCxlFUEiQp/", title: "Royal Ethnic Vibes", gradient: "from-pink-500 to-rose-500" },
-    { url: "https://www.instagram.com/reel/DTzOT3zj-9k/", title: "Wedding Glamour", gradient: "from-amber-400 to-orange-600" },
-    { url: "https://www.instagram.com/reel/DUKc4O2j-cs/", title: "Festive Favorites", gradient: "from-purple-500 to-indigo-600" },
-    { url: "https://www.instagram.com/reel/DUe_D6vjwxr/", title: "Latest Arrivals", gradient: "from-emerald-500 to-teal-600" },
-    { url: "https://www.instagram.com/reel/DU1_gJTDwjB/", title: "Signature Style", gradient: "from-blue-500 to-indigo-700" },
-    { url: "https://www.instagram.com/reel/DTkHsWLD9LJ/", title: "Elegant Designs", gradient: "from-yellow-500 to-orange-700" }
+    { url: "https://www.instagram.com/reel/DVCxlFUEiQp/", title: "Royal Ethnic Vibes",  thumb: "../public/assets/reels/1.jpeg" },
+    { url: "https://www.instagram.com/reel/DTzOT3zj-9k/", title: "Wedding Glamour", thumb: "/assets/reels/2.jpeg" },
+    { url: "https://www.instagram.com/reel/DUKc4O2j-cs/", title: "Festive Favorites", thumb: "/assets/reels/3.jpeg" },
+    { url: "https://www.instagram.com/reel/DUe_D6vjwxr/", title: "Latest Arrivals", thumb: "/assets/reels/4.jpeg" },
+    { url: "https://www.instagram.com/reel/DU1_gJTDwjB/", title: "Signature Style", thumb: "/assets/reels/5.jpeg" },
+    { url: "https://www.instagram.com/reel/DTkHsWLD9LJ/", title: "Elegant Designs",thumb: "/assets/reels/6.jpeg" }
   ];
 
   const collections = [
@@ -226,12 +226,19 @@ const HomePage = ({ setCurrentPage }) => {
                 rel="noopener noreferrer"
                 className={`relative aspect-[9/16] rounded-3xl overflow-hidden group shadow-2xl transition-all duration-500 hover:-translate-y-4 border border-white/10`}
               >
-                <div className={`absolute inset-0 bg-gradient-to-br ${reel.gradient} opacity-80 group-hover:scale-110 transition-transform duration-700`} />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="p-4 rounded-full bg-white/20 backdrop-blur-md scale-90 group-hover:scale-110 transition-transform">
-                    <Play size={40} className="text-white fill-white" />
+                  {reel.thumb && (
+                    <img
+                      src={reel.thumb}
+                      alt={reel.title}
+                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                  )}
+                  <div className={`absolute inset-0 bg-gradient-to-br ${reel.gradient} opacity-70 group-hover:scale-110 transition-transform duration-700`} />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="p-4 rounded-full bg-white/20 backdrop-blur-md scale-90 group-hover:scale-110 transition-transform">
+                      <Play size={40} className="text-white fill-white" />
+                    </div>
                   </div>
-                </div>
                 <div className="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
                   <p className="text-[10px] font-black uppercase tracking-[0.2em] text-amber-400 mb-2">Exclusive Look</p>
                   <h3 className="text-lg font-bold leading-tight group-hover:text-amber-400 transition-colors">{reel.title}</h3>
