@@ -395,7 +395,7 @@ const HomePage = ({ setCurrentPage }) => {
               <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100">
                 <Phone className="text-amber-600 mb-4" />
                 <h4 className="font-black mb-2 text-lg">Quick Contact</h4>
-                <p className="text-gray-600 text-sm">+91 98765 43210 <br /> 0341-2550123</p>
+                <p className="text-gray-600 text-sm">0341 7963307</p>
               </div>
             </div>
 

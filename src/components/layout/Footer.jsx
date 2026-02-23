@@ -11,9 +11,33 @@ return(
           Established in Neamatpur, providing quality ethnic and modern wear for the whole family for over three decades.
         </p>
         <div className="flex space-x-4">
-          <Instagram className="cursor-pointer hover:text-amber-500 transition-colors" />
-          <Facebook className="cursor-pointer hover:text-amber-500 transition-colors" />
-          <Phone className="cursor-pointer hover:text-amber-500 transition-colors" />
+          <a
+            href="https://www.instagram.com/ashokthefamilyshop"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-400 hover:text-amber-500 transition-colors"
+            aria-label="Instagram"
+          >
+            <Instagram />
+          </a>
+
+          <a
+            href="https://www.facebook.com/share/1Djp9aaAGL/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-400 hover:text-amber-500 transition-colors"
+            aria-label="Facebook"
+          >
+            <Facebook />
+          </a>
+
+          <a
+            href="tel:03417963307"
+            className="text-gray-400 hover:text-amber-500 transition-colors"
+            aria-label="Call us"
+          >
+            <Phone />
+          </a>
         </div>
       </div>
       
