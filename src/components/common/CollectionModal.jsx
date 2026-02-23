@@ -15,9 +15,17 @@ export default function CollectionModal({ collection, onClose }) {
 
         <div className="grid grid-cols-1 md:grid-cols-2">
           <div className="h-64 md:h-auto bg-amber-100 relative overflow-hidden">
-            <div className="absolute inset-0 flex items-center justify-center">
-               <ShoppingBag size={120} className="text-amber-300 opacity-50" />
-            </div>
+            {collection.image ? (
+              <img 
+                src={collection.image} 
+                alt={collection.title}
+                className="w-full h-full object-cover"
+              />
+            ) : (
+              <div className="absolute inset-0 flex items-center justify-center">
+                <ShoppingBag size={120} className="text-amber-300 opacity-50" />
+              </div>
+            )}
             <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/70 to-transparent text-white">
                <span className="text-amber-400 font-bold uppercase tracking-widest text-sm">Now Trending</span>
                <h2 className="text-4xl font-bold">{collection.title}</h2>

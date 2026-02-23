@@ -23,7 +23,7 @@ export default function Navbar({ currentPage, setCurrentPage }) {
             >
               <div className="relative h-12 w-auto flex items-center justify-center overflow-hidden">
                 <img 
-                  src="https://via.placeholder.com/200x60?text=ASHOK+LOGO" 
+                  src="../../../public/assets/logo.png" 
                   alt="Ashok The Family Shop" 
                   className="h-full object-contain group-hover:scale-105 transition-transform"
                   onError={(e) => {

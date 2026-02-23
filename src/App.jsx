@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { 
-  Menu, X, Phone, Mail, MapPin, Instagram, Facebook, 
+import {
+  Menu, X, Phone, Mail, MapPin, Instagram, Facebook,
   ChevronRight, Users, Heart, Clock, Award, Send,
   Camera, ShoppingBag, Star, MessageCircle, ExternalLink,
   Target, Eye, Play, ShieldCheck, Lock, FileText, Quote
@@ -32,14 +32,14 @@ import CollectionModal from './components/common/CollectionModal';
 // --- Components ---
 
 <>
-<FloatingActions/>
+  <FloatingActions />
 
 
-<Navbar/>
+  <Navbar />
 
 
 
-<Footer/>
+  <Footer />
 </>
 // --- Pages ---
 
@@ -68,20 +68,21 @@ const HomePage = ({ setCurrentPage }) => {
   ];
 
   const reels = [
-    { url: "https://www.instagram.com/reel/DThP-tTj52R/", title: "Royal Ethnic Vibes", gradient: "from-pink-500 to-rose-500" },
-    { url: "https://www.instagram.com/reel/DTJ986pD-WK/", title: "Wedding Glamour", gradient: "from-amber-400 to-orange-600" },
-    { url: "https://www.instagram.com/reel/DTMfWV6Dyb8/", title: "Festive Favorites", gradient: "from-purple-500 to-indigo-600" },
-    { url: "https://www.instagram.com/reel/DTcN2TBD5ty/", title: "Latest Arrivals", gradient: "from-emerald-500 to-teal-600" },
-    { url: "https://www.instagram.com/reel/DUhZehyku-M/", title: "Signature Style", gradient: "from-blue-500 to-indigo-700" },
-    { url: "https://www.instagram.com/reel/DUhZehyku-M/", title: "Elegant Designs", gradient: "from-yellow-500 to-orange-700" }
+    { url: "https://www.instagram.com/reel/DVCxlFUEiQp/", title: "Royal Ethnic Vibes", gradient: "from-pink-500 to-rose-500" },
+    { url: "https://www.instagram.com/reel/DTzOT3zj-9k/", title: "Wedding Glamour", gradient: "from-amber-400 to-orange-600" },
+    { url: "https://www.instagram.com/reel/DUKc4O2j-cs/", title: "Festive Favorites", gradient: "from-purple-500 to-indigo-600" },
+    { url: "https://www.instagram.com/reel/DUe_D6vjwxr/", title: "Latest Arrivals", gradient: "from-emerald-500 to-teal-600" },
+    { url: "https://www.instagram.com/reel/DU1_gJTDwjB/", title: "Signature Style", gradient: "from-blue-500 to-indigo-700" },
+    { url: "https://www.instagram.com/reel/DTkHsWLD9LJ/", title: "Elegant Designs", gradient: "from-yellow-500 to-orange-700" }
   ];
 
   const collections = [
-    { 
+    {
       id: 'mens',
-      title: "Men's Collection", 
-      icon: "👔", 
-      desc: "Suits, Sherwanis & Casuals", 
+      title: "Men's Collection",
+      image: "../public/assets/collections/mens-collection.png",
+      icon: "👔",
+      desc: "Suits, Sherwanis & Casuals",
       color: "bg-blue-50",
       segments: [
         { name: "Royal Sherwanis", details: "Premium fabrics with handcrafted zardosi work for the modern groom." },
@@ -89,11 +90,12 @@ const HomePage = ({ setCurrentPage }) => {
         { name: "Ethnic Kurtas", details: "Comfortable cotton and silk blends for every festive occasion." }
       ]
     },
-    { 
+    {
       id: 'womens',
-      title: "Women's Ethnic", 
-      icon: "💃", 
-      desc: "Lehengas & Designer Sarees", 
+      title: "Women's Ethnic",
+      image: "../public/assets/collections/Women-Ethnic.png",
+      icon: "💃",
+      desc: "Lehengas & Designer Sarees",
       color: "bg-pink-50",
       segments: [
         { name: "Designer Sarees", details: "Banarasi, Kanjivaram, and Net sarees curated from across India." },
@@ -101,11 +103,12 @@ const HomePage = ({ setCurrentPage }) => {
         { name: "Salwar Suits", details: "Ready-to-wear and unstitched sets in trendsetting prints." }
       ]
     },
-    { 
+    {
       id: 'wedding',
-      title: "Wedding Special", 
-      icon: "💍", 
-      desc: "Royal Bridal & Groom Wear", 
+      title: "Wedding Special",
+      image: "../public/assets/collections/Wedding-Special.png",
+      icon: "💍",
+      desc: "Royal Bridal & Groom Wear",
       color: "bg-red-50",
       segments: [
         { name: "Bridal Couture", details: "The centerpiece of our store. Custom-fitted royal bridal ensembles." },
@@ -113,11 +116,12 @@ const HomePage = ({ setCurrentPage }) => {
         { name: "Engagement Wear", details: "Contemporary Indo-western gowns and Jodhpuris." }
       ]
     },
-    { 
+    {
       id: 'kids',
-      title: "Kids Kingdom", 
-      icon: "🧸", 
-      desc: "Cute & Comfortable Style", 
+      title: "Kids Kingdom",
+      image: "../public/assets/collections/Kids-Kingdom.png",
+      icon: "🧸",
+      desc: "Cute & Comfortable Style",
       color: "bg-green-50",
       segments: [
         { name: "Tiny Traditional", details: "Dhotis and Ghagras for children that are soft on skin." },
@@ -125,11 +129,12 @@ const HomePage = ({ setCurrentPage }) => {
         { name: "Casual Comfort", details: "High-quality play-wear for daily adventures." }
       ]
     },
-    { 
+    {
       id: 'festive',
-      title: "Festive Wear", 
-      icon: "✨", 
-      desc: "Traditional Outfits for All", 
+      title: "Festive Wear",
+      image: "../public/assets/collections/Festive-Wear.png",
+      icon: "✨",
+      desc: "Traditional Outfits for All",
       color: "bg-amber-50",
       segments: [
         { name: "Puja Collection", details: "Newest arrivals specifically for the festive season peak." },
@@ -144,16 +149,16 @@ const HomePage = ({ setCurrentPage }) => {
       <section className="relative h-[85vh] flex items-center bg-gray-100 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent z-10" />
-          <img 
-             src="https://images.unsplash.com/photo-1594145070046-dfb5c65a41be?auto=format&fit=crop&q=80&w=1920" 
-             alt="Heritage Shop Background" 
-             className="w-full h-full object-cover"
+          <img
+            src="../public/assets/hero-bg.png"
+            alt="Heritage Shop Background"
+            className="w-full h-full object-cover"
           />
         </div>
-        
+
         <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
           <div className="bg-amber-600/20 backdrop-blur-sm inline-block px-4 py-1 rounded-full text-amber-400 font-bold mb-6 border border-amber-600/30 tracking-widest text-xs">
-             ESTD. 1990 IN NEAMATPUR
+            ESTD. 1990 IN NEAMATPUR
           </div>
           <h1 className="text-5xl md:text-8xl font-black mb-6 leading-tight tracking-tighter">
             Elegance for the <br />
@@ -163,13 +168,13 @@ const HomePage = ({ setCurrentPage }) => {
             Discover a curated collection of ethnic, wedding, and modern wear. Join 500,000+ happy customers who trust Ashok The Family Shop.
           </p>
           <div className="flex flex-wrap gap-5">
-            <button 
+            <button
               onClick={() => setCurrentPage('gallery')}
               className="px-10 py-5 bg-amber-600 hover:bg-amber-700 text-white rounded-2xl font-black transition-all transform hover:scale-105 shadow-xl flex items-center"
             >
               BROWSE COLLECTION <ChevronRight className="ml-2" />
             </button>
-            <button 
+            <button
               onClick={() => setCurrentPage('contact')}
               className="px-10 py-5 border-2 border-white hover:bg-white hover:text-black text-white rounded-2xl font-black transition-all"
             >
@@ -184,10 +189,10 @@ const HomePage = ({ setCurrentPage }) => {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 relative z-10">
             <div className="bg-gray-50 rounded-3xl p-4 shadow-sm border border-gray-100">
-               <AnimatedCounter target={5} suffix=" Lakh+" label="Happy Customers" />
+              <AnimatedCounter target={5} suffix=" Lakh+" label="Happy Customers" />
             </div>
             <div className="bg-gray-50 rounded-3xl p-4 shadow-sm border border-gray-100">
-               <AnimatedCounter target={1} suffix=" Lakh+" label="Trusted Families" />
+              <AnimatedCounter target={1} suffix=" Lakh+" label="Trusted Families" />
             </div>
           </div>
         </div>
@@ -201,11 +206,11 @@ const HomePage = ({ setCurrentPage }) => {
               <div className="flex items-center justify-center md:justify-start text-pink-500 font-black tracking-widest uppercase mb-4 text-sm">
                 <Instagram size={20} className="mr-2" /> Trending Now
               </div>
-              <h2 className="text-4xl md:text-6xl font-black leading-tight tracking-tighter">Experience Our <br/><span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-amber-500">Virtual Runway</span></h2>
+              <h2 className="text-4xl md:text-6xl font-black leading-tight tracking-tighter">Experience Our <br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-amber-500">Virtual Runway</span></h2>
             </div>
-            <a 
-              href="https://instagram.com/ashokfamilyshop" 
-              target="_blank" 
+            <a
+              href="https://instagram.com/ashokfamilyshop"
+              target="_blank"
               className="px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-md rounded-2xl border border-white/20 font-bold transition-all flex items-center group"
             >
               View All Reels <ChevronRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
@@ -214,8 +219,8 @@ const HomePage = ({ setCurrentPage }) => {
 
           <div className="grid grid-cols-2 md:grid-cols-6 gap-4 md:gap-8">
             {reels.map((reel, idx) => (
-              <a 
-                key={idx} 
+              <a
+                key={idx}
                 href={reel.url}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -223,9 +228,9 @@ const HomePage = ({ setCurrentPage }) => {
               >
                 <div className={`absolute inset-0 bg-gradient-to-br ${reel.gradient} opacity-80 group-hover:scale-110 transition-transform duration-700`} />
                 <div className="absolute inset-0 flex items-center justify-center">
-                   <div className="p-4 rounded-full bg-white/20 backdrop-blur-md scale-90 group-hover:scale-110 transition-transform">
-                      <Play size={40} className="text-white fill-white" />
-                   </div>
+                  <div className="p-4 rounded-full bg-white/20 backdrop-blur-md scale-90 group-hover:scale-110 transition-transform">
+                    <Play size={40} className="text-white fill-white" />
+                  </div>
                 </div>
                 <div className="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
                   <p className="text-[10px] font-black uppercase tracking-[0.2em] text-amber-400 mb-2">Exclusive Look</p>
@@ -283,11 +288,11 @@ const HomePage = ({ setCurrentPage }) => {
             </div>
             <div className="w-32 h-2 bg-amber-600 hidden md:block" />
           </div>
-          
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {collections.map((item, idx) => (
-              <div 
-                key={idx} 
+              <div
+                key={idx}
                 className={`${item.color} p-10 rounded-3xl border border-gray-100 shadow-sm hover:shadow-2xl transition-all group flex flex-col h-full`}
               >
                 <div className="text-6xl mb-8 group-hover:rotate-12 transition-transform inline-block">
@@ -296,7 +301,7 @@ const HomePage = ({ setCurrentPage }) => {
                 <h3 className="text-3xl font-bold text-gray-900 mb-3">{item.title}</h3>
                 <p className="text-gray-600 mb-10 text-lg leading-relaxed">{item.desc}</p>
                 <div className="mt-auto">
-                  <button 
+                  <button
                     onClick={() => setSelectedCol(item)}
                     className="flex items-center text-amber-700 font-black text-lg bg-white/50 px-6 py-3 rounded-xl border border-amber-200 group-hover:bg-amber-600 group-hover:text-white transition-all w-full justify-center"
                   >
@@ -347,7 +352,7 @@ const HomePage = ({ setCurrentPage }) => {
       {/* Quick Glimpses */}
       <section className="py-24 bg-amber-950 text-white relative">
         <div className="absolute top-0 right-0 p-20 opacity-5 pointer-events-none">
-           <ShoppingBag size={300} />
+          <ShoppingBag size={300} />
         </div>
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-16">
           <div className="space-y-6 text-center md:text-left">
@@ -380,7 +385,7 @@ const HomePage = ({ setCurrentPage }) => {
           <div>
             <span className="text-amber-600 font-black tracking-[0.2em] mb-4 block">VISIT US</span>
             <h2 className="text-5xl font-black mb-10 leading-tight tracking-tighter">Find Our Neamatpur Showroom</h2>
-            
+
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-12">
               <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100">
                 <MapPin className="text-amber-600 mb-4" />
@@ -393,7 +398,7 @@ const HomePage = ({ setCurrentPage }) => {
                 <p className="text-gray-600 text-sm">+91 98765 43210 <br /> 0341-2550123</p>
               </div>
             </div>
-            
+
             <form className="bg-white p-10 rounded-[2.5rem] shadow-2xl border border-gray-100">
               <h3 className="text-3xl font-black mb-8 text-gray-900">Send an Inquiry</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
@@ -406,19 +411,19 @@ const HomePage = ({ setCurrentPage }) => {
               </button>
             </form>
           </div>
-          
+
           <div className="h-[600px] bg-gray-100 rounded-[3rem] overflow-hidden relative shadow-2xl border-8 border-white group">
             <div className="absolute inset-0 bg-amber-50 flex flex-col items-center justify-center p-12 text-center">
-               <div className="relative mb-10">
-                  <div className="absolute -inset-4 bg-amber-600/20 rounded-full animate-ping" />
-                  <MapPin size={80} className="text-amber-600 relative z-10" />
-               </div>
-               <h3 className="text-3xl font-black text-gray-900 mb-4">Located in Neamatpur</h3>
-               <p className="text-gray-600 max-w-sm mb-10 text-lg">Find us on the main market road, easily accessible for families from across the district.</p>
-               <button className="bg-white text-gray-900 px-10 py-4 rounded-2xl font-black shadow-xl hover:shadow-2xl transition-all border border-gray-100 flex items-center">
-                  OPEN GOOGLE MAPS <ExternalLink size={20} className="ml-3" />
-               </button>
-               <div className="absolute inset-0 opacity-10 pointer-events-none" style={{ backgroundImage: 'radial-gradient(#000 1px, transparent 1px)', backgroundSize: '30px 30px' }}></div>
+              <div className="relative mb-10">
+                <div className="absolute -inset-4 bg-amber-600/20 rounded-full animate-ping" />
+                <MapPin size={80} className="text-amber-600 relative z-10" />
+              </div>
+              <h3 className="text-3xl font-black text-gray-900 mb-4">Located in Neamatpur</h3>
+              <p className="text-gray-600 max-w-sm mb-10 text-lg">Find us on the main market road, easily accessible for families from across the district.</p>
+              <button className="bg-white text-gray-900 px-10 py-4 rounded-2xl font-black shadow-xl hover:shadow-2xl transition-all border border-gray-100 flex items-center">
+                OPEN GOOGLE MAPS <ExternalLink size={20} className="ml-3" />
+              </button>
+              <div className="absolute inset-0 opacity-10 pointer-events-none" style={{ backgroundImage: 'radial-gradient(#000 1px, transparent 1px)', backgroundSize: '30px 30px' }}></div>
             </div>
           </div>
         </div>
@@ -434,7 +439,7 @@ const PrivacyPolicyPage = () => (
         <ShieldCheck className="text-amber-600 mr-4" size={48} />
         <h1 className="text-5xl font-black tracking-tight">Privacy Policy</h1>
       </div>
-      
+
       <div className="prose prose-lg text-gray-700 max-w-none space-y-12">
         <section>
           <h2 className="text-2xl font-black text-gray-900 mb-4 flex items-center">
@@ -497,7 +502,12 @@ const AboutPage = () => (
     <div className="max-w-4xl mx-auto px-4">
       <h1 className="text-6xl font-black text-center mb-16 tracking-tight">Our Philosophy</h1>
       <div className="aspect-video bg-gray-100 rounded-[3rem] mb-16 flex items-center justify-center shadow-2xl overflow-hidden relative group">
-        <Users size={150} className="text-amber-200 group-hover:scale-110 transition-transform duration-700" />
+        <img 
+          src="../public/assets/about.png" 
+          alt="Our Philosophy"
+          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+        /> 
+        {/* <Users size={150} className="text-amber-200 group-hover:scale-110 transition-transform duration-700" /> */}
         <div className="absolute inset-0 bg-amber-900/10" />
       </div>
       <div className="prose prose-xl text-gray-700 max-w-none leading-relaxed">
@@ -561,12 +571,12 @@ const JourneyPage = () => {
 
 const GalleryPage = () => {
   const photos = [
-    { id: 1, title: "The Golden Wedding", story: "Meera chose a custom ruby-red lehenga. It was the first wedding in her family in 10 years.", tag: "Bridal Couture" },
-    { id: 2, title: "Grandfather's Gift", story: "Mr. Gupta came to buy his grandson's first suit for his graduation.", tag: "Formal Wear" },
-    { id: 3, title: "Puja Rush 2023", story: "A glimpse of our store during the peak of Durga Puja.", tag: "Festive Vibes" },
-    { id: 4, title: "The Anniversary Silk", story: "A couple celebrated 50 years of marriage by buying matching silk outfits.", tag: "Legacy" },
-    { id: 5, title: "Kids Fashion Show", story: "A candid moment of a toddler trying on his first 'sherwani'.", tag: "Kids Kingdom" },
-    { id: 6, title: "The Store Front", story: "Our Neamatpur landmark. Lit up and ready to welcome families.", tag: "Showroom" }
+    { id: 1, title: "The Golden Wedding", story: "Meera chose a custom ruby-red lehenga. It was the first wedding in her family in 10 years.", tag: "Bridal Couture", image: "../public/assets/gallery/The-Golden-Wedding.png" },
+    { id: 2, title: "Grandfather's Gift", story: "Mr. Gupta came to buy his grandson's first suit for his graduation.", tag: "Formal Wear", image: "../public/assets/gallery/Grandfather-Gift.png" },
+    { id: 3, title: "Puja Rush 2023", story: "A glimpse of our store during the peak of Durga Puja.", tag: "Festive Vibes", image: "../public/assets/gallery/Puja-Rush-2023.png"},
+    { id: 4, title: "The Anniversary Silk", story: "A couple celebrated 50 years of marriage by buying matching silk outfits.", tag: "Legacy", image: "../public/assets/gallery/The-Anniversary-Silk.png" },
+    { id: 5, title: "Kids Fashion Show", story: "A candid moment of a toddler trying on his first 'sherwani'.", tag: "Kids Kingdom", image: "../public/assets/gallery/Kids-Fashion-Show.png" },
+    { id: 6, title: "The Store Front", story: "Our Neamatpur landmark. Lit up and ready to welcome families.", tag: "Showroom", image: "../public/assets/gallery/The-Store-Front.png" }
   ];
 
   return (
@@ -580,17 +590,25 @@ const GalleryPage = () => {
           {photos.map((p) => (
             <div key={p.id} className="group flex flex-col h-full bg-white rounded-[2rem] overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-500">
               <div className="aspect-[4/5] bg-amber-50 relative flex items-center justify-center overflow-hidden">
-                 <Camera size={100} className="text-amber-200 group-hover:scale-125 transition-transform duration-700" />
-                 <span className="absolute top-6 left-6 bg-amber-600 text-white text-xs px-4 py-2 rounded-full font-black uppercase tracking-widest shadow-lg">{p.tag}</span>
+                {p.image ? (
+                  <img
+                    src={p.image}
+                    alt={p.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                ) : (
+                  <Camera size={100} className="text-amber-200 group-hover:scale-125 transition-transform duration-700" />
+                )}
+                <span className="absolute top-6 left-6 bg-amber-600 text-white text-xs px-4 py-2 rounded-full font-black uppercase tracking-widest shadow-lg">{p.tag}</span>
               </div>
               <div className="p-10 flex flex-col flex-grow">
                 <h3 className="text-3xl font-black mb-4 text-gray-900">{p.title}</h3>
                 <p className="text-gray-600 text-lg leading-relaxed mb-8">"{p.story}"</p>
                 <div className="mt-auto flex items-center justify-between border-t pt-6 border-gray-100">
-                   <div className="flex text-amber-500">
-                      {[1, 2, 3, 4, 5].map(s => <Star key={s} size={18} className="fill-current" />)}
-                   </div>
-                   <span className="text-gray-400 font-bold text-sm italic">#AshokLegacy</span>
+                  <div className="flex text-amber-500">
+                    {[1, 2, 3, 4, 5].map(s => <Star key={s} size={18} className="fill-current" />)}
+                  </div>
+                  <span className="text-gray-400 font-bold text-sm italic">#AshokLegacy</span>
                 </div>
               </div>
             </div>
@@ -643,11 +661,11 @@ const ContactPage = () => {
         <div className="bg-white p-12 rounded-[3.5rem] shadow-3xl border border-gray-100">
           {submitted ? (
             <div className="text-center py-20 animate-fadeIn">
-               <div className="bg-green-100 text-green-600 w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-10">
-                  <Send size={48} />
-               </div>
-               <h3 className="text-4xl font-black mb-6">Successfully Sent!</h3>
-               <button onClick={() => setSubmitted(false)} className="text-amber-600 font-black text-xl hover:underline">SEND ANOTHER MESSAGE</button>
+              <div className="bg-green-100 text-green-600 w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-10">
+                <Send size={48} />
+              </div>
+              <h3 className="text-4xl font-black mb-6">Successfully Sent!</h3>
+              <button onClick={() => setSubmitted(false)} className="text-amber-600 font-black text-xl hover:underline">SEND ANOTHER MESSAGE</button>
             </div>
           ) : (
             <form onSubmit={(e) => { e.preventDefault(); setSubmitted(true); }} className="space-y-8">
@@ -709,16 +727,17 @@ export default function App() {
   return (
     <div className="min-h-screen font-sans text-gray-900 selection:bg-amber-200 selection:text-amber-900 bg-white">
       <Navbar currentPage={currentPage} setCurrentPage={setCurrentPage} />
-      
+
       <main className="relative">
         {renderPage()}
       </main>
 
       <Footer setCurrentPage={setCurrentPage} />
-      
+
       <FloatingActions />
 
-      <style dangerouslySetInnerHTML={{ __html: `
+      <style dangerouslySetInnerHTML={{
+        __html: `
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap');
         
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
