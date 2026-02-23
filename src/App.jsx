@@ -68,7 +68,7 @@ const HomePage = ({ setCurrentPage }) => {
   ];
 
   const reels = [
-    { url: "https://www.instagram.com/reel/DVCxlFUEiQp/", title: "Royal Ethnic Vibes",  thumb: "../public/assets/reels/1.jpeg" },
+    { url: "https://www.instagram.com/reel/DVCxlFUEiQp/", title: "Royal Ethnic Vibes",  thumb: "/assets/reels/1.jpeg" },
     { url: "https://www.instagram.com/reel/DTzOT3zj-9k/", title: "Wedding Glamour", thumb: "/assets/reels/2.jpeg" },
     { url: "https://www.instagram.com/reel/DUKc4O2j-cs/", title: "Festive Favorites", thumb: "/assets/reels/3.jpeg" },
     { url: "https://www.instagram.com/reel/DUe_D6vjwxr/", title: "Latest Arrivals", thumb: "/assets/reels/4.jpeg" },
@@ -80,7 +80,7 @@ const HomePage = ({ setCurrentPage }) => {
     {
       id: 'mens',
       title: "Men's Collection",
-      image: "../public/assets/collections/mens-collection.png",
+      image: "/assets/collections/mens-collection.png",
       icon: "👔",
       desc: "Suits, Sherwanis & Casuals",
       color: "bg-blue-50",
@@ -93,7 +93,7 @@ const HomePage = ({ setCurrentPage }) => {
     {
       id: 'womens',
       title: "Women's Ethnic",
-      image: "../public/assets/collections/Women-Ethnic.png",
+      image: "/assets/collections/Women-Ethnic.png",
       icon: "💃",
       desc: "Lehengas & Designer Sarees",
       color: "bg-pink-50",
@@ -106,7 +106,7 @@ const HomePage = ({ setCurrentPage }) => {
     {
       id: 'wedding',
       title: "Wedding Special",
-      image: "../public/assets/collections/Wedding-Special.png",
+      image: "/assets/collections/Wedding-Special.png",
       icon: "💍",
       desc: "Royal Bridal & Groom Wear",
       color: "bg-red-50",
@@ -119,7 +119,7 @@ const HomePage = ({ setCurrentPage }) => {
     {
       id: 'kids',
       title: "Kids Kingdom",
-      image: "../public/assets/collections/Kids-Kingdom.png",
+      image: "/assets/collections/Kids-Kingdom.png",
       icon: "🧸",
       desc: "Cute & Comfortable Style",
       color: "bg-green-50",
@@ -132,7 +132,7 @@ const HomePage = ({ setCurrentPage }) => {
     {
       id: 'festive',
       title: "Festive Wear",
-      image: "../public/assets/collections/Festive-Wear.png",
+      image: "/assets/collections/Festive-Wear.png",
       icon: "✨",
       desc: "Traditional Outfits for All",
       color: "bg-amber-50",
@@ -150,7 +150,7 @@ const HomePage = ({ setCurrentPage }) => {
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent z-10" />
           <img
-            src="../public/assets/hero-bg.png"
+            src="/assets/hero-bg.png"
             alt="Heritage Shop Background"
             className="w-full h-full object-cover"
           />
@@ -209,7 +209,7 @@ const HomePage = ({ setCurrentPage }) => {
               <h2 className="text-4xl md:text-6xl font-black leading-tight tracking-tighter">Experience Our <br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-amber-500">Virtual Runway</span></h2>
             </div>
             <a
-              href="https://instagram.com/ashokfamilyshop"
+              href="https://instagram.com/ashokthefamilyshop"
               target="_blank"
               className="px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-md rounded-2xl border border-white/20 font-bold transition-all flex items-center group"
             >
@@ -510,7 +510,7 @@ const AboutPage = () => (
       <h1 className="text-6xl font-black text-center mb-16 tracking-tight">Our Philosophy</h1>
       <div className="aspect-video bg-gray-100 rounded-[3rem] mb-16 flex items-center justify-center shadow-2xl overflow-hidden relative group">
         <img 
-          src="../public/assets/about.png" 
+          src="/assets/about.png" 
           alt="Our Philosophy"
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
         /> 
@@ -578,12 +578,12 @@ const JourneyPage = () => {
 
 const GalleryPage = () => {
   const photos = [
-    { id: 1, title: "The Golden Wedding", story: "Meera chose a custom ruby-red lehenga. It was the first wedding in her family in 10 years.", tag: "Bridal Couture", image: "../public/assets/gallery/The-Golden-Wedding.png" },
-    { id: 2, title: "Grandfather's Gift", story: "Mr. Gupta came to buy his grandson's first suit for his graduation.", tag: "Formal Wear", image: "../public/assets/gallery/Grandfather-Gift.png" },
-    { id: 3, title: "Puja Rush 2023", story: "A glimpse of our store during the peak of Durga Puja.", tag: "Festive Vibes", image: "../public/assets/gallery/Puja-Rush-2023.png"},
-    { id: 4, title: "The Anniversary Silk", story: "A couple celebrated 50 years of marriage by buying matching silk outfits.", tag: "Legacy", image: "../public/assets/gallery/The-Anniversary-Silk.png" },
-    { id: 5, title: "Kids Fashion Show", story: "A candid moment of a toddler trying on his first 'sherwani'.", tag: "Kids Kingdom", image: "../public/assets/gallery/Kids-Fashion-Show.png" },
-    { id: 6, title: "The Store Front", story: "Our Neamatpur landmark. Lit up and ready to welcome families.", tag: "Showroom", image: "../public/assets/gallery/The-Store-Front.png" }
+    { id: 1, title: "The Golden Wedding", story: "Meera chose a custom ruby-red lehenga. It was the first wedding in her family in 10 years.", tag: "Bridal Couture", image: "/assets/gallery/The-Golden-Wedding.png" },
+    { id: 2, title: "Grandfather's Gift", story: "Mr. Gupta came to buy his grandson's first suit for his graduation.", tag: "Formal Wear", image: "/assets/gallery/Grandfather-Gift.png" },
+    { id: 3, title: "Puja Rush 2023", story: "A glimpse of our store during the peak of Durga Puja.", tag: "Festive Vibes", image: "/assets/gallery/Puja-Rush-2023.png"},
+    { id: 4, title: "The Anniversary Silk", story: "A couple celebrated 50 years of marriage by buying matching silk outfits.", tag: "Legacy", image: "/assets/gallery/The-Anniversary-Silk.png" },
+    { id: 5, title: "Kids Fashion Show", story: "A candid moment of a toddler trying on his first 'sherwani'.", tag: "Kids Kingdom", image: "/assets/gallery/Kids-Fashion-Show.png" },
+    { id: 6, title: "The Store Front", story: "Our Neamatpur landmark. Lit up and ready to welcome families.", tag: "Showroom", image: "/assets/gallery/The-Store-Front.png" }
   ];
 
   return (
