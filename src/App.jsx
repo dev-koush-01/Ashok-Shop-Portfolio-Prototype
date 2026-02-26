@@ -158,7 +158,7 @@ const HomePage = ({ setCurrentPage }) => {
 
         <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
           <div className="bg-amber-600/20 backdrop-blur-sm inline-block px-4 py-1 rounded-full text-amber-400 font-bold mb-6 border border-amber-600/30 tracking-widest text-xs">
-            ESTD. 1990 IN NEAMATPUR
+            ESTD. 1980 IN NEAMATPUR
           </div>
           <h1 className="text-5xl md:text-8xl font-black mb-6 leading-tight tracking-tighter">
             Elegance for the <br />
@@ -403,6 +403,7 @@ const HomePage = ({ setCurrentPage }) => {
                 <Phone className="text-amber-600 mb-4" />
                 <h4 className="font-black mb-2 text-lg">Quick Contact</h4>
                 <p className="text-gray-600 text-sm">0341 7963307</p>
+                <p className="text-gray-600 text-sm">+91 6296324199</p>
               </div>
             </div>
 
@@ -522,7 +523,7 @@ const AboutPage = () => (
           "For 34 years, we've believed that clothes aren't just fabric; they are the vessels for your family's most cherished memories."
         </p>
         <p className="mb-8 text-lg">
-          Ashok The Family Shop started as a dream in 1990 by Mr. Ashok. In the early days, Neamatpur was a growing market, and we grew alongside it. Our philosophy has always been simple: treat every customer like a guest in our home.
+          Ashok The Family Shop started as a dream in 1980 by Mr. Ashok Kr Poddar. In the early days, Neamatpur was a growing market, and we grew alongside it. Our philosophy has always been simple: treat every customer like a guest in our home.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 my-16">
           <div className="bg-gray-50 p-10 rounded-3xl border border-gray-100 hover:border-amber-400 transition-colors">
@@ -543,12 +544,27 @@ const AboutPage = () => (
 
 const JourneyPage = () => {
   const milestones = [
-    { year: "1990", title: "Humble Roots", desc: "The first 200 sq.ft store opened in Neamatpur by Mr. Ashok with a vision for quality family retail." },
-    { year: "1998", title: "Department Expansion", desc: "Added dedicated sections for Men's suits and Women's ethnic sarees, doubling the store footprint." },
-    { year: "2010", title: "Modern Showroom", desc: "Redesigned the entire experience into a multi-story modern showroom with air conditioning and premium decor." },
-    { year: "2020", title: "Resilient Growth", desc: "Launched digital consultations and home delivery services to serve our families during challenging times." },
-    { year: "2024", title: "5 Lakh+ Milestones", desc: "Proudly serving the third generation of families who shopped with us in the 90s." }
-  ];
+  { 
+    year: "1980", 
+    title: "Foundation Year", 
+    desc: "Established in 1980 by Mr. Ashok Kr Poddar with a strong vision to build a trusted family retail store." 
+  },
+  { 
+    year: "2010", 
+    title: "Modern Showroom Launch", 
+    desc: "Transformed into a modern showroom in 2010, enhancing the shopping experience with improved infrastructure and premium presentation." 
+  },
+  { 
+    year: "2019", 
+    title: "Biggest Family Store in Town", 
+    desc: "Achieved the milestone of becoming the biggest family store in our town, trusted by generations of customers." 
+  },
+  { 
+    year: "2025", 
+    title: "5 Lakh Happy Customers", 
+    desc: "Proudly serving around 5 lakh happy customers and continuing the legacy of quality, trust, and excellence." 
+  }
+];
 
   return (
     <div className="animate-fadeIn py-24 bg-gray-50 min-h-screen">
@@ -558,7 +574,7 @@ const JourneyPage = () => {
           {milestones.map((m, idx) => (
             <div key={idx} className={`mb-24 relative ${idx % 2 === 0 ? 'md:left-[-50%] md:pr-16 md:text-right' : 'md:pl-16'}`}>
               <div className="absolute top-0 w-10 h-10 bg-amber-600 rounded-full -left-[22px] md:left-[-20px] border-8 border-white shadow-xl z-10" />
-              <div className="bg-white p-10 rounded-[2.5rem] shadow-xl border border-gray-100 hover:shadow-2xl transition-all group">
+              <div className="bg-white p-10 rounded-[2.5rem] shadow-xl border border-gray-100 hover:shadow-2xl transition-all group max-w-sm">
                 <span className="text-amber-600 font-black text-5xl block mb-4 group-hover:scale-110 transition-transform origin-left md:origin-center">{m.year}</span>
                 <h3 className="text-3xl font-bold mb-4 text-gray-900">{m.title}</h3>
                 <p className="text-gray-600 text-lg leading-relaxed">{m.desc}</p>
@@ -641,7 +657,7 @@ const ContactPage = () => {
               </div>
               <div>
                 <p className="text-sm text-gray-400 font-black uppercase tracking-[0.2em] mb-1">Direct Line</p>
-                <p className="text-2xl font-black text-gray-900">+91 98765 43210</p>
+                <p className="text-2xl font-black text-gray-900">0341 7963307</p>
               </div>
             </div>
             <div className="flex items-center group">
@@ -659,7 +675,7 @@ const ContactPage = () => {
               </div>
               <div>
                 <p className="text-sm text-gray-400 font-black uppercase tracking-[0.2em] mb-1">Our Location</p>
-                <p className="text-2xl font-black text-gray-900">Main Road, Neamatpur, WB</p>
+                <p className="text-2xl font-black text-gray-900">272-738 G T Road, Neamatpur, WB</p>
               </div>
             </div>
           </div>
