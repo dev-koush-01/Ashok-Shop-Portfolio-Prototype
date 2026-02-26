@@ -35,9 +35,9 @@ export default function Navbar({ currentPage, setCurrentPage }) {
                   <ShoppingBag className="text-white h-6 w-6" />
                 </div>
               </div>
-              <span className="ml-3 text-2xl font-black text-gray-900 tracking-tighter hidden sm:block">
+              {/* <span className="ml-3 text-2xl font-black text-gray-900 tracking-tighter hidden sm:block">
                 ASHOK <span className="text-amber-600">THE FAMILY SHOP</span>
-              </span>
+              </span> */}
             </div>
           </div>
           
