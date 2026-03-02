@@ -397,7 +397,7 @@ const HomePage = ({ setCurrentPage }) => {
               <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100">
                 <MapPin className="text-amber-600 mb-4" />
                 <h4 className="font-black mb-2 text-lg">Our Address</h4>
-                <p className="text-gray-600 text-sm">Main Road, Neamatpur, Near Station, West Bengal - 713359</p>
+                <p className="text-gray-600 text-sm">272-738 G T Road, Neamatpur p.o-Sitarampur West bengal-713359</p>
               </div>
               <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100">
                 <Phone className="text-amber-600 mb-4" />
